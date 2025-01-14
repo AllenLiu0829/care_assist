@@ -1,0 +1,41 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "care-assist-787d1",
+          "appId": "1:497553706951:android:b861c53580c98601c4d3e2",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "care-assist-787d1",
+          "configurations": {
+            "android": "1:497553706951:android:b861c53580c98601c4d3e2",
+            "ios": "1:497553706951:ios:73acd13da27df738c4d3e2",
+            "web": "1:497553706951:web:6a3e8228db243623c4d3e2",
+            "windows": "1:497553706951:web:c8b224e19d26d377c4d3e2"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
+}

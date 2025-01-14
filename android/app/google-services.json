@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497553706951",
+    "project_id": "care-assist-787d1",
+    "storage_bucket": "care-assist-787d1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497553706951:android:b861c53580c98601c4d3e2",
+        "android_client_info": {
+          "package_name": "com.example.care_assist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVS3fezT3II_yq5w5ysq5G-YXYlV9NWbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
