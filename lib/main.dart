@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:care_assist/firebase_options.dart';
 
 import 'package:care_assist/services/navigation.dart';
+import 'package:care_assist/views_models/company_info_list_vm.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
       providers: [
         Provider<NavigationService>(
           create: (_) => NavigationService(),
+        ),
+        ChangeNotifierProvider<CompanyInfoViewModel>(
+          create: (_) => CompanyInfoViewModel(),
         ),
       ],
       child: SafeArea(

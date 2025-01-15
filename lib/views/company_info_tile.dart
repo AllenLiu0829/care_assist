@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:care_assist/models/company_info.dart';
 
-class ProductTile extends StatelessWidget {
-  const ProductTile({super.key, required this.companyInfo});
+class CompanyInfoTile extends StatelessWidget {
+  const CompanyInfoTile({super.key, required this.companyInfo});
   final CompanyInfo companyInfo;
 
   @override

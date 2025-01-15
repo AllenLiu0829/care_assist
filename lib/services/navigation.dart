@@ -1,15 +1,15 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
-import 'package:care_assist/views/product_page.dart';
+import 'package:care_assist/views/company_info_page.dart';
 
 final routerConfig = GoRouter(
   initialLocation: '/',
   routes: <RouteBase>[
     GoRoute(
       path: '/',
-      name: 'product',
-      builder: (context, state) => const ProductPage(),
+      name: 'companyInfo',
+      builder: (context, state) => const CompanyInfoPage(),
     ),
   ],
   debugLogDiagnostics: true,
