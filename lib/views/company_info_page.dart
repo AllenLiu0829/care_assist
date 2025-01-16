@@ -9,16 +9,16 @@ class CompanyInfoPage extends StatefulWidget {
   const CompanyInfoPage({super.key});
 
   @override
-  State<CompanyInfoPage> createState() => _ProductPageState();
+  State<CompanyInfoPage> createState() => _CompanyInfoPageState();
 }
 
-class _ProductPageState extends State<CompanyInfoPage> {
+class _CompanyInfoPageState extends State<CompanyInfoPage> {
   @override
   Widget build(BuildContext context) {
     final companyInfos = context.watch<CompanyInfoViewModel>().companyInfos;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Company Informantions'),
+        title: const Text('Company Informantion'),
         actions: [
           IconButton(
             onPressed: () {},

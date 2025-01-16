@@ -1,22 +1,20 @@
-class CompanyInfo {
+class Product {
   String? id;
   final String name;
   final String info;
 
-  CompanyInfo({
+  Product({
     required this.name,
     required this.info,
   });
 
-  CompanyInfo._({
-    required this.id,
+  Product._({
     required this.name,
     required this.info,
   });
 
-  factory CompanyInfo.fromMap(Map<String, dynamic> map, String id) {
-    return CompanyInfo._(
-      id: id,
+  factory Product.fromMap(Map<String, dynamic> map, String id) {
+    return Product._(
       name: map['name'],
       info: map['info'],
     );
@@ -24,7 +22,6 @@ class CompanyInfo {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
       'name': name,
       'info': info,
     };

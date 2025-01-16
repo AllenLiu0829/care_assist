@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:care_assist/models/company_info.dart';
+import 'package:care_assist/services/navigation.dart';
 
 class CompanyInfoTile extends StatelessWidget {
   const CompanyInfoTile({super.key, required this.companyInfo});
@@ -9,15 +11,17 @@ class CompanyInfoTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-        leading: const Icon(CupertinoIcons.circle_grid_hex_fill),
-        title: Text(companyInfo.name),
-        subtitle: Text(companyInfo.info),
-        trailing: IconButton(
-          onPressed: () {},
-          icon: const Icon(CupertinoIcons.cart_fill_badge_plus),
+    final navigationService =
+        Provider.of<NavigationService>(context, listen: false);
+    return GestureDetector(
+      onTap: () => navigationService.goProductPage(companyInfo.id.toString()),
+      child: Card(
+        child: ListTile(
+          contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+          leading: const Icon(CupertinoIcons.circle_grid_hex_fill),
+          title: Text(companyInfo.name),
+          subtitle: Text(companyInfo.info),
+          trailing: const Icon(CupertinoIcons.ellipsis_vertical),
         ),
       ),
     );
