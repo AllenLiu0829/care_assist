@@ -1,11 +1,12 @@
-import 'package:care_assist/views/product_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:care_assist/views/company_info_page.dart';
+import 'package:care_assist/views/product_page.dart';
+import 'package:care_assist/views/product_list_page.dart';
 import 'package:care_assist/views_models/company_info_list_vm.dart';
 import 'package:care_assist/views_models/product_page_vm.dart';
-import 'package:provider/provider.dart';
 
 final routerConfig = GoRouter(
   initialLocation: '/',
@@ -13,7 +14,7 @@ final routerConfig = GoRouter(
     GoRoute(
       path: '/',
       name: 'companyInfo',
-      builder: (context, state) => const CompanyInfoPage(),
+      builder: (context, state) => const ProductListPage(),
       routes: <RouteBase>[
         ShellRoute(
           builder: (BuildContext context, GoRouterState state, Widget child) {

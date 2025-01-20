@@ -18,7 +18,7 @@ class _ProductPageState extends State<ProductPage> {
     final products = context.watch<ProductViewModel>().products;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Products Informantion'),
+        title: const Text('Company\'s Products Informantion'),
         actions: [
           IconButton(
             onPressed: () {},

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:care_assist/models/product.dart';
 
 class ProductRepository {

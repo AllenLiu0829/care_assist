@@ -1,4 +1,3 @@
-import 'package:care_assist/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -6,7 +5,7 @@ import 'package:care_assist/firebase_options.dart';
 
 import 'package:care_assist/services/navigation.dart';
 import 'package:care_assist/views_models/company_info_list_vm.dart';
-import 'package:care_assist/views_models/product_page_vm.dart';
+import 'package:care_assist/views_models/product_list_page_vm.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +27,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<CompanyInfoViewModel>(
           create: (_) => CompanyInfoViewModel(),
+        ),
+        ChangeNotifierProvider<ProductListViewModel>(
+          create: (_) => ProductListViewModel(),
         ),
       ],
       child: SafeArea(
