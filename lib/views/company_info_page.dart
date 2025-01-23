@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:care_assist/views_models/company_info_list_vm.dart';
+import 'package:care_assist/view_models/company_info_list_vm.dart';
 import 'package:care_assist/views/company_info_tile.dart';
+import 'package:care_assist/views/add_company_info_dialog.dart';
 
 class CompanyInfoPage extends StatefulWidget {
   const CompanyInfoPage({super.key});
@@ -19,12 +20,6 @@ class _CompanyInfoPageState extends State<CompanyInfoPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Company Informantion'),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(CupertinoIcons.cart_fill),
-          ),
-        ],
       ),
       body: ListView.builder(
         itemCount: companyInfos.length,
@@ -33,7 +28,10 @@ class _CompanyInfoPageState extends State<CompanyInfoPage> {
         ),
       ),
       floatingActionButton: IconButton(
-        onPressed: () {},
+        onPressed: () => showDialog(
+          context: context,
+          builder: (context) => const AddCompanyInfoDialog(),
+        ),
         icon: const Icon(CupertinoIcons.add_circled_solid),
       ),
     );

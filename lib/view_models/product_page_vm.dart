@@ -38,8 +38,7 @@ class ProductViewModel with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> createProduct(
-      String name, List<bool> tag, String url, int price, String info) async {
+  Future<void> createProduct(String name, String info) async {
     Product newProduct = Product(name: name, info: info);
     return await _productRepository.createProduct(newProduct, companyId);
   }

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:care_assist/models/company_info.dart';
 import 'package:care_assist/services/navigation.dart';
+import 'package:care_assist/view_models/company_info_list_vm.dart';
 
 class CompanyInfoTile extends StatelessWidget {
   const CompanyInfoTile({super.key, required this.companyInfo});
@@ -11,8 +12,7 @@ class CompanyInfoTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final navigationService =
-        Provider.of<NavigationService>(context, listen: false);
+    final navigationService = context.watch<NavigationService>();
     return GestureDetector(
       onTap: () => navigationService.goProductPage(companyInfo.id.toString()),
       child: Card(
@@ -21,7 +21,15 @@ class CompanyInfoTile extends StatelessWidget {
           leading: const Icon(CupertinoIcons.circle_grid_hex_fill),
           title: Text(companyInfo.name),
           subtitle: Text(companyInfo.info),
-          trailing: const Icon(CupertinoIcons.ellipsis_vertical),
+          trailing: IconButton(
+            onPressed: () {
+              context
+                  .read<CompanyInfoViewModel>()
+                  .deleteCompanyInfo(companyInfo);
+              context.read<CompanyInfoViewModel>().updateViewModel();
+            },
+            icon: const Icon(Icons.playlist_remove),
+          ),
         ),
       ),
     );

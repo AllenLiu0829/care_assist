@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/cupertino.dart';
 
-import 'package:care_assist/views_models/product_list_page_vm.dart';
+import 'package:care_assist/view_models/product_list_page_vm.dart';
 import 'package:care_assist/views/product_tile.dart';
 
 class ProductListPage extends StatefulWidget {
@@ -18,6 +19,12 @@ class _ProductListPageState extends State<ProductListPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Products List'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(CupertinoIcons.cart_fill),
+          ),
+        ],
       ),
       body: ListView.builder(
         itemCount: products.length,
