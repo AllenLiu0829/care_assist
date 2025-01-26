@@ -6,6 +6,7 @@ import 'package:care_assist/firebase_options.dart';
 import 'package:care_assist/services/navigation.dart';
 import 'package:care_assist/view_models/company_info_list_vm.dart';
 import 'package:care_assist/view_models/product_list_page_vm.dart';
+import 'package:care_assist/view_models/survey_page_vm.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +31,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<ProductListViewModel>(
           create: (_) => ProductListViewModel(),
+        ),
+        ChangeNotifierProvider<SurveyInfoViewModel>(
+          create: (_) => SurveyInfoViewModel(),
         ),
       ],
       child: SafeArea(

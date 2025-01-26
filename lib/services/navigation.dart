@@ -6,6 +6,7 @@ import 'package:care_assist/views/menu_page.dart';
 import 'package:care_assist/views/company_info_page.dart';
 import 'package:care_assist/views/product_page.dart';
 import 'package:care_assist/views/product_list_page.dart';
+import 'package:care_assist/views/survey_page.dart';
 import 'package:care_assist/view_models/company_info_list_vm.dart';
 import 'package:care_assist/view_models/product_page_vm.dart';
 
@@ -51,6 +52,11 @@ final routerConfig = GoRouter(
           name: 'productList',
           builder: (context, state) => const ProductListPage(),
         ),
+        GoRoute(
+          path: '/survey',
+          name: 'survey',
+          builder: (context, state) => const SurveyPage(),
+        ),
       ],
     ),
   ],
@@ -87,5 +93,9 @@ class NavigationService {
 
   void goProductListPage() {
     _router.pushNamed('productList');
+  }
+
+  void goSurveyPage() {
+    _router.pushNamed('survey');
   }
 }

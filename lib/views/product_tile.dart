@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:care_assist/models/product.dart';
-import 'package:provider/provider.dart';
 import 'package:care_assist/view_models/product_page_vm.dart';
 
 class ProductTile extends StatelessWidget {

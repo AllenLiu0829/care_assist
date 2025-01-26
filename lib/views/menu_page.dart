@@ -41,7 +41,7 @@ class MenuPage extends StatelessWidget {
           ActionChip(
             avatar: const Icon(CupertinoIcons.doc_text_search),
             label: const Text('Health Survey'),
-            onPressed: () {},
+            onPressed: () => navigationService.goSurveyPage(),
           ),
         ],
       ),
