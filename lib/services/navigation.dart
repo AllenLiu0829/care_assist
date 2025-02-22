@@ -7,6 +7,7 @@ import 'package:care_assist/views/company_info_page.dart';
 import 'package:care_assist/views/product_page.dart';
 import 'package:care_assist/views/product_list_page.dart';
 import 'package:care_assist/views/survey_page.dart';
+import 'package:care_assist/views/auth_page.dart';
 import 'package:care_assist/view_models/company_info_list_vm.dart';
 import 'package:care_assist/view_models/product_page_vm.dart';
 
@@ -15,6 +16,11 @@ final routerConfig = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
+      name: 'account',
+      builder: (context, state) => const AuthPage(),
+    ),
+    GoRoute(
+      path: '/menu',
       name: 'menu',
       builder: (context, state) => const MenuPage(),
       routes: <RouteBase>[
@@ -82,20 +88,28 @@ class NavigationService {
     _router = routerConfig;
   }
 
+  void goMenuPage() {
+    _router.goNamed('menu');
+    return;
+  }
+
   void goProductPage(String companyId) {
-    _router.push('/companyInfo/$companyId/product');
+    _router.push('/menu/companyInfo/$companyId/product');
     return;
   }
 
   void goCompanyInfoPage() {
     _router.pushNamed('companyInfo');
+    return;
   }
 
   void goProductListPage() {
     _router.pushNamed('productList');
+    return;
   }
 
   void goSurveyPage() {
     _router.pushNamed('survey');
+    return;
   }
 }

@@ -12,7 +12,12 @@
           "package_name": "com.example.care_assist"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "497553706951-ack2edqq2j1692n4iqegv298d60o0ol4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCVS3fezT3II_yq5w5ysq5G-YXYlV9NWbU"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497553706951-ack2edqq2j1692n4iqegv298d60o0ol4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "497553706951-1vkp7slmj24osfckb30k36evod65k71n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.careAssist"
+              }
+            }
+          ]
         }
       }
     }
